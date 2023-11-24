@@ -1,0 +1,57 @@
+@font-face {
+  font-family: 'Cambira';
+  src: url('./font/cambria.ttc') format('truetype');
+}
+
+@font-face {
+  font-family: 'Cambira-bolt';
+  src: url('./font/cambriab.ttf') format('truetype');
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: #0a0a0b;
+}
+
+.background,
+.sparkles,
+.character,
+.additional-sparkles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+
+  background-repeat: no-repeat;
+}
+
+.background {
+  background-image: url('./assets/landing_bg.svg');
+}
+
+.sparkles {
+  background-image: url('./assets/sparks_back.png');
+}
+
+.character {
+  background-image: url('./assets/witcher.svg');
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.additional-sparkles {
+  background-image: url('./assets/sparks_front.png');
+}
