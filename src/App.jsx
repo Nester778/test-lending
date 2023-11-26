@@ -35,7 +35,7 @@ function App() {
       setCopied(true);
       setTimeout(() => {
         setCopied(false);
-      }, 2000);
+      }, 1000);
     });
   };
 
@@ -55,7 +55,7 @@ function App() {
             <span class="v-border"></span>
             <button class="copy-btn p-0" onClick={handleCopyClick}>COPY CODE</button>
           </div>
-          <p>{copied ? 'code copied!' : ''}</p>
+          <p class={copied ? 'copied' : 'non-copied'}>code copied!</p>
           <button class="play-btn">PLAY NOW</button>
         </div>
         <div className="logo-container">
